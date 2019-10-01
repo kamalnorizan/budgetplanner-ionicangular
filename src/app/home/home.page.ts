@@ -25,6 +25,8 @@ export class HomePage {
     this.expensesList.push(this.enteredReason + ' : RM' + this.inputAmount);
   }
 
-  removeItem() { }
+  removeItem(index) {
+    this.expensesList.splice(index, 1);
+  }
 
 }
