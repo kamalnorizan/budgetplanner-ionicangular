@@ -21,9 +21,9 @@
               </ion-item>
               <ion-item>
                 <ion-label position="floating">Expense Amount</ion-label>
-                <ion-input type="number" id="input-amount"></ion-input>
+                <ion-input type="number" [(ngModel)]="inputAmount"></ion-input>
               </ion-item>
-              <ion-button fill="outline" color="danger" id="btn-cancel">
+              <ion-button (click)="resetForm()" fill="outline" color="danger" id="btn-cancel">
                 <ion-icon slot="start" name="close"></ion-icon>
                 Clear
               </ion-button>
@@ -33,7 +33,22 @@
               </ion-button>
             </ion-card-content>
           </ion-card>
-          Entered Reason : {{enteredReason}}
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-list>
+            <ion-list>
+              <ion-item-sliding>
+                <ion-item>
+                  <ion-label>Item</ion-label>
+                </ion-item>
+                <ion-item-options side="start">
+                  <ion-item-option (click)="removeItem()">Unread</ion-item-option>
+                </ion-item-options>
+              </ion-item-sliding>
+            </ion-list>
+          </ion-list>
         </ion-col>
       </ion-row>
     </ion-grid>

@@ -6,12 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-enteredReason = '';
+  enteredReason = '';
+  inputAmount = '';
 
   constructor() { }
 
   onClick() {
     alert('Button clicked');
   }
+
+  resetForm() { 
+    this.enteredReason = '';
+    this.inputAmount = '';
+  }
+
+  removeItem() { }
 
 }
