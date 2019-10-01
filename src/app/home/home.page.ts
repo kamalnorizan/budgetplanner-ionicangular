@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class HomePage {
   enteredReason = '';
   inputAmount = '';
+  expensesList = [];
 
   constructor() { }
 
@@ -15,9 +16,13 @@ export class HomePage {
     alert('Button clicked');
   }
 
-  resetForm() { 
+  resetForm() {
     this.enteredReason = '';
     this.inputAmount = '';
+  }
+
+  addExpense() {
+    this.expensesList.push(this.enteredReason + ' : RM' + this.inputAmount);
   }
 
   removeItem() { }
